@@ -1,6 +1,6 @@
 #1 Create a movies list containing a single tuple. The tuple should contain a movie title, the director’s name, the release year of the movie, and the movie’s budget
 
-movies = [("Fast and furious", "Mike", 2004, "$60 Million"),]
+movies = [("Fast and furious", "Mike", 2004, "$60 Million")]
 
 #2 Use the input function to gather information about another movie. You need a title, director’s name, release year, and budget.
 
