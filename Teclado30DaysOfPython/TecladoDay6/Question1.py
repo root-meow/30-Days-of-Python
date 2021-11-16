@@ -11,7 +11,7 @@ Print how much each employee is due to be paid at the end of the week in a nice,
 
 #List of employees and their data
 employees = [
-    ("Rolf Smith", 35, 8.75),
+    ("Rolf Smith", 35, 8.75),           #Tuples in a list.
     ("Anne Pun", 30, 12.50),
     ("Charlie Lee", 50, 15.50),
     ("Bob Smith", 20, 7.00)
