@@ -6,4 +6,4 @@ for number in range (100):
 		    break
     else:
 	# This line only runs if no divisors produced integer results
-	    print(f"{number} is prime!")
+	    print(f"{number} is prime!")l
