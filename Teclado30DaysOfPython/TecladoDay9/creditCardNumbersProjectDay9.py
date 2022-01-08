@@ -25,9 +25,11 @@ credit_card_num = list(input("Please enter your credit card number: "))
 #step 1. remove right most digit.
 credit_card_number = credit_card_num.pop()
 
-#step 2. 
-credit_card_number = reversed(credit_card_number)
-print(credit_card_number)
+#step 2
+credit_card_number = list(credit_card_number)
+credit_card_number.reverse()
+
+#print(credit_card_number)
 
 #Step 3. Take number at even indices and double. If above 9, subtract 9
 for index, number in enumerate(credit_card_number):
@@ -41,7 +43,9 @@ for index, number in enumerate(credit_card_number):
 #Step 4. Add all numbers in list
 for number in credit_card_number:
     number = int(number)
-total_numbers = sum(credit_card_number)
+    number_items = []
+    number_items.append(number)
+    total_numbers = sum(number_items)
 
 #step 5. If the result is divisible by ten, number is valid
 if total_numbers % 10 == 0:
