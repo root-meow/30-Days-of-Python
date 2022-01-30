@@ -15,6 +15,8 @@ For this project the application needs to have the following functionality:
     4. Users should be able to select these options from a text menu, and they should be able to perform multiple operations without
     restarting the program. You can see an example of a working menu in the post on while loops (day 8)."""
 
+#********************************************* Try to use SRP (Single Responsibility Function) *********************************************
+
 
 menu_options = """Please enter one of the following options:
 
@@ -31,11 +33,16 @@ def add_book():
     book_list.append(book)
 
 def display_booklist():
+
+    print()
+
     for book in book_list:
         Title = book[0]
         Author = book[1]
         Year = book[2]
-        print('Title: ' + Title + ' | Author: ' + Author + ' | Year: ' + Year)
+        print('Title: ' + Title + '\n' + 'Author: ' + Author + '\n' + 'Year: ' + Year)
+
+        print()
 
 selected_option = input(menu_options).strip().lower()
 
@@ -51,7 +58,7 @@ while selected_option != "q":
         print(f"Sorry, '{selected_option}' isn't a valid option.")
 
     # Allow the user to change their selection at the end of each iteration
-    selected_option = input(menu_options).strip().lower()
+    selected_option = input(menu_options).strip().lower()   #The program does not stop but asks this again.
 
 
 
