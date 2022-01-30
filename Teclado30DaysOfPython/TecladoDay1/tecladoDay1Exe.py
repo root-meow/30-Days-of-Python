@@ -8,11 +8,13 @@ print('I am 23 years old.')
 print('Number of days in a year = 365')
 print('Number of weeks in a year = 52')
 print('Number of months in a year = 12')
+print()
 #so
 #Number of days in 27 years is
 print('Number of days in 27 years is ', 27 * 365)
 print('Number of weeks in 27 years is ', 27 * 52)
 print('Number of months in 27 years', 27 * 12)
+print()
 
 #Q3 Calculate and print the area of a circle with a radius of 5 units. You can be as accurate as you like with pi
 
