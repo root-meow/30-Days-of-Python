@@ -29,10 +29,11 @@ s: subtract
 m: multiply
 d: divide
 
+
 What would you like to do? """)
 
 operation = operations.get(selected_option)  #Get method is used here. 
-
+#while (selected_option := input(selected_option).strip().lower()) != "q":
 if operation:
 	a = int(input("Please enter a value for a: "))
 	b = int(input("Please enter a value for b: "))
@@ -82,7 +83,7 @@ operations = {
     'a' : lambda a,b: a + b,
     's' : lambda a,b: a - b,
     'm' : lambda a,b: a * b,
-    'd' : divide
+    'd' : divy
     #'d' : lambda a,b: a / b  #Lambda expressions are limited to single expressions
 }
 
@@ -92,6 +93,7 @@ a: add
 s: subtract
 m: multiply
 d: divide
+q: quit #test
 
 What would you like to do? """)
 
