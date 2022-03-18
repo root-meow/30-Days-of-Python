@@ -10,7 +10,7 @@ print(base)
 print()
 
 #Using slicing
-# I think slicing is better as we need not create a new list
+# I think slicing is better as we need not create a new list but if you concatenate using + it always creates a new collection so...
 base = [1,2,3,4,5]
 base = base[1:] + base[:1]
 print(base)
