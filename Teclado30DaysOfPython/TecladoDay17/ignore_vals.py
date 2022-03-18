@@ -8,6 +8,9 @@ print()
 for _ in range(10):
 	print("Jameson")
 
+for _ in range(10):
+    print ("Test")
+
 #Isolation of values
 head, *tail = [1, 2, 3, 4, 5]
 
