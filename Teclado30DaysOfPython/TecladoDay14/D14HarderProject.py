@@ -41,7 +41,7 @@ def retrieve_books():
     with open("book_details.csv", "r") as book_details:
         #Iterate through the list of books and separate the different details at the comma
         for book in book_details:
-            title, author, year_of_publication, read_status = book.strip().split(",")
+            title,author,year_of_publication,read_status = book.strip().split(",")
 
             #Create a dictionary, after all, we need to print them in a user friendly format
             retrieved_books.append({
@@ -59,7 +59,8 @@ def display_books(retrieved_books):
     print()
     
     for book in retrieved_books:
-        print(f"{book['title']}, {book['author']}, ({book['year_of_publication']}) - {book['read_status']}")
+        #print(f"{book['title']}, {book['author']}, ({book['year_of_publication']}) - {book['read_status']}")
+        print("{title} by {author}({year_of_publication}), {read_status}".format(**book))
 
         print() #Prints an empty line
 
@@ -106,7 +107,8 @@ def mark_read():
     #update_file()
     with open("book_details.csv", "w") as book_details:
         for book in retrieved_books:
-            book_details.write(f"{book['title']},{book['author']},{book['year_of_publication']},{book['read_status']}\n")
+            #book_details.write(f"{book['title']},{book['author']},{book['year_of_publication']},{book['read_status']}\n")
+            book_details.write("{title},{author},{year_of_publication}, {read_status}\n".format(**book))
 
         #Write changes to file
         #with open("book_details", "w") as book_details:
@@ -141,7 +143,9 @@ def delete_entry():
     #update_file()
         with open("book_details.csv", "w") as book_details:
             for book in retrieved_books:
-                book_details.write(f"{book['title']},{book['author']},{book['year_of_publication']},{book['read_status']}\n")
+                #book_details.write(f"{book['title']},{book['author']},{book['year_of_publication']},{book['read_status']}\n")
+                #We can also use ** to turn a dictionary into a series of keyword arguments.
+                book_details.write("{title},{author},{year_of_publication}, {read_status}\n".format(**book))  #Perhaps this ** means for as many keywords as there are in each book in retrieved books
     else:
         print("Sorry. No books match that search!")
 
