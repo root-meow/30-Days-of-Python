@@ -9,7 +9,8 @@ user_movie_director = input("movie director: ")
 user_movie_release_year = input("year of release: ")
 user_movie_budget = input("budget: ")
 
-#3 Create a new tuple from the values you gathered using input. Make sure they’re in the same order as the tuple you wrote in the movies list
+#3 Create a new tuple from the values you gathered using input. 
+#Make sure they’re in the same order as the tuple you wrote in the movies list
 #f string saves us a whole bunch of trouble
 t_user_movie = (f"{user_movie_name},{user_movie_director},{user_movie_release_year},{user_movie_budget}")
 print(t_user_movie)
