@@ -3,24 +3,20 @@
 movies = [("Fast and furious", "Mike", 2004, "$60 Million")]
 
 #2 Use the input function to gather information about another movie. You need a title, director’s name, release year, and budget.
-
-user_movie_name = input("please enter a movie name: ")
-x = user_movie_name;
-user_movie_director = input("please enter the movie's directors name: ")
-y = user_movie_director;
-user_movie_release_year = input("please enter the movie's release year: ")
-a = user_movie_release_year;
-user_movie_budget = input("please enter the movie's release budget: ")
-b = user_movie_budget;
+#Reduce wordiness
+user_movie_name = input("movie name: ")
+user_movie_director = input("movie director: ")
+user_movie_release_year = input("year of release: ")
+user_movie_budget = input("budget: ")
 
 #3 Create a new tuple from the values you gathered using input. Make sure they’re in the same order as the tuple you wrote in the movies list
-
-t_user_movie = (user_movie_name, user_movie_director, user_movie_release_year, user_movie_budget)
+#f string saves us a whole bunch of trouble
+t_user_movie = (f"{user_movie_name},{user_movie_director},{user_movie_release_year},{user_movie_budget}")
 print(t_user_movie)
 
 #4 Use an f-string to print the movie name and release year by accessing your new movie tuple.
 
-print(f"The movie you entered was {t_user_movie[0]} and the release year is {t_user_movie[2]}.")
+print(f"The movie you entered was {user_movie_name} and the release year is {user_movie_release_year}.")
 
 #5 Add the new movie tuple to the movies collection using append.
 
